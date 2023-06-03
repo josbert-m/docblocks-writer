@@ -1,0 +1,38 @@
+{
+    "name": "josbert-m/docsblock-writer",
+    "description": "A simple package for write PHPDocs blocks for any PHP class.",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "keywords": [
+        "phpdocs",
+        "ide",
+        "suggestions",
+        "docsblock",
+        "development"
+    ],
+    "authors": [
+        {
+            "name": "Josbert Muria",
+            "email": "josbertjmuriac@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "JosbertM\\DocsblockWriter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JosbertM\\DocsblockWriter\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
