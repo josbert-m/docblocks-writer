@@ -1,6 +1,6 @@
 {
     "name": "josbert-m/docblocks-writer",
-    "description": "A simple package for write PHPDocs blocks for some PHP class.",
+    "description": "A simple package to write PHPDocs blocks for some PHP class.",
     "minimum-stability": "stable",
     "license": "MIT",
     "keywords": [
