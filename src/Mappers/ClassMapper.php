@@ -169,4 +169,25 @@ class ClassMapper extends Mapper
             ARRAY_FILTER_USE_BOTH
         );
     }
+
+    /**
+     * Get real class start line.
+     *
+     * @return int
+     */
+    public function getStartLine(): int
+    {
+        $header = array_slice($this->lines, 0, ($this->reflection->getStartLine() + 1));
+        $hasAttributes = [];
+
+        foreach ($header as $index => $item) {
+            if (preg_match("/#\[(?:.+)\]/", $item) === 1) {
+                $hasAttributes[] = $index;
+            }
+        }
+
+        return count($hasAttributes) > 0 ?
+            min($hasAttributes) + 1 :
+            $this->reflection->getStartLine();
+    }
 }
