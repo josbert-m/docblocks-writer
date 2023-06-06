@@ -79,6 +79,16 @@ abstract class Mapper
     }
 
     /**
+     * Get the path of class.
+     *
+     * @return string
+     */
+    public function getFilename(): string
+    {
+        return $this->filename;
+    }
+
+    /**
      * Determine if exists DocComment.
      *
      * @return bool
