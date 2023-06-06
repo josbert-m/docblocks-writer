@@ -121,13 +121,13 @@ class ClassMapper extends Mapper
      */
     public function getIndentation(): int
     {
-        if (!isset($this->indentation) && isset($this->rawCommentBlock)) {
+        if (!isset($this->indentation)) {
             $startLine = $this->reflection
                 ->getStartLine();
 
             $line = $this->lines[$startLine - 1];
 
-            preg_match("/^\s+(?=[^\s])/", $line, $match);
+            preg_match("/^\s+(?=\S)/", $line, $match);
             $substr = count($match) > 0 ?
                 preg_replace("/\t/", '    ', $match[0]) :
                 '';
@@ -181,7 +181,7 @@ class ClassMapper extends Mapper
         $hasAttributes = [];
 
         foreach ($header as $index => $item) {
-            if (preg_match("/#\[(?:.+)\]/", $item) === 1) {
+            if (preg_match("/#\[.+]/", $item) === 1) {
                 $hasAttributes[] = $index;
             }
         }
