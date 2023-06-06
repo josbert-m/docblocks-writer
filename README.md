@@ -4,8 +4,6 @@ A simple package to write PHPDocs blocks for some PHP class.
 
 It supports PHP ^8 and PHP ^7.4.
 
----
-
 ## Installation
 
 Require this package with composer using the following command:
@@ -14,11 +12,9 @@ Require this package with composer using the following command:
 composer require --dev josbert-m/docblocks-writer
 ```
 
----
-
 ## How to use?
 
-Create a instance of the writer.
+Create an instance of the writer.
 
 ```php
 <?php
